@@ -62,7 +62,7 @@ body {
 }
 
 .sidebar .logo svg {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .sidebar ul {
@@ -76,6 +76,101 @@ body {
   gap: 30px;
   align-items: center;
   font-size: 1.3rem;
-  font-weight: 900;
+  font-weight: 500;
   cursor: pointer;
+}
+
+/* Header */
+
+.header {
+  padding: 0 3rem;
+}
+.header .top,
+.header .bottom {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  justify-content: space-between;
+}
+
+.header .top {
+  padding: 2rem 0 1.5rem;
+}
+.header .search-box {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.header .search-box input {
+  padding: 0.4rem 0.6rem;
+  font-size: 100%;
+  font-family: inherit;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background-color: #e2e8f0;
+}
+
+.header .search-box svg {
+  font-size: 20px;
+}
+.profile {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile .bell {
+  font-size: 1.8rem;
+}
+.profile img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+.profile .name {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.left {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 20px;
+}
+
+.left img {
+  border-radius: 50%;
+}
+
+.left .greeting {
+  padding: 0.5rem 0;
+  font-weight: 500;
+}
+.left .name {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.right {
+  justify-self: center;
+  align-self: center;
+  gap: 15px;
+  display: flex;
+}
+.right button {
+  padding: 0.6rem 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: #1992d4;
+  border: none;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.right button:hover,
+.right button:focus {
+  background-color: #1372a5;
 }

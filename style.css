@@ -17,29 +17,65 @@ h6 {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-family: system-ui, sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-areas:
-    "sidebar header"
-    "sidebar main";
+  grid-template-columns: 300px 1fr;
 }
-.container div {
-  padding: 15px;
-}
+
 .sidebar {
+  grid-column: 1/2;
   background-color: #1992d4;
-  grid-area: sidebar;
 }
 .header {
-  grid-area: header;
+  grid-column: 2/3;
   background-color: white;
 }
-.content {
-  grid-area: main;
+.main {
+  grid-column: 2/3;
   background-color: #e2e8f0;
+}
+
+/* Sidebar */
+.sidebar {
+  display: grid;
+  gap: 50px;
+  padding: 1.5rem;
+  color: white;
+}
+
+.sidebar .logo {
+  font-size: 30px;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.sidebar .logo svg {
+  font-size: 50px;
+}
+
+.sidebar ul {
+  display: grid;
+  gap: 15px;
+}
+
+.sidebar ul li {
+  display: grid;
+  grid-template-columns: 1rem auto;
+  gap: 30px;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  cursor: pointer;
 }

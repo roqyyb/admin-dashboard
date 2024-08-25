@@ -16,3 +16,30 @@ h6 {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+.container div {
+  padding: 15px;
+}
+.sidebar {
+  background-color: #1992d4;
+  grid-area: sidebar;
+}
+.header {
+  grid-area: header;
+  background-color: white;
+}
+.content {
+  grid-area: main;
+  background-color: #e2e8f0;
+}

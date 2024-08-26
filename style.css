@@ -23,11 +23,13 @@ ul {
 
 body {
   font-family: system-ui, sans-serif;
+  --shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075);
 }
 
 .container {
   display: grid;
   grid-template-columns: 300px 1fr;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -46,6 +48,7 @@ body {
 /* Sidebar */
 .sidebar {
   display: grid;
+  align-content: start;
   gap: 50px;
   padding: 1.5rem;
   color: white;
@@ -173,4 +176,92 @@ body {
 .right button:hover,
 .right button:focus {
   background-color: #1372a5;
+}
+
+/* Content */
+
+.content {
+  padding: 2rem 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 3fr 1fr;
+}
+.projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.projects .card {
+  padding: 2rem 1rem;
+  background-color: white;
+  border-left: 7px solid #f0b429;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.projects .card h4 {
+  margin-bottom: 0.5rem;
+}
+.projects .card .title {
+  text-transform: capitalize;
+}
+
+.projects .card .text {
+  margin-bottom: 2rem;
+}
+
+.projects .card footer {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.projects .card svg {
+  cursor: pointer;
+}
+
+/* Updates */
+.updates {
+  display: grid;
+  gap: 30px;
+  align-content: start;
+}
+.news .cards {
+  border-radius: 6px;
+  background-color: white;
+  padding: 2rem;
+  display: grid;
+  gap: 20px;
+  box-shadow: var(--shadow);
+}
+
+.news .card h5 {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.news .card p {
+  font-size: 0.9rem;
+}
+.news .card:not(:first-child) {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 0.5rem;
+}
+
+.trending .profiles {
+  background: white;
+  padding: 2rem;
+  display: grid;
+  justify-content: start;
+  gap: 20px;
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+}
+
+.trending .profile .username {
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+.trending .profile .text {
+  font-size: 0.9rem;
 }
